@@ -25,10 +25,12 @@ CREATE TABLE developers (
 	CHECK (age>18)
 );
 
+CREATE TYPE P_LANGUAGES AS ENUM ('JAVA', 'C#', 'C++', 'JavaScript', 'Pyton');
+CREATE TYPE GRADES AS ENUM ('junior', 'middle', 'senior');
 CREATE TABLE skills (
-	programming_lang VARCHAR(50) NOT NULL,
-	grade VARCHAR(50) NOT NULL,
-	id VARCHAR(10) PRIMARY KEY
+	programming_lang P_LANGUAGES NOT NULL,
+	grade GRADES NOT NULL,
+	id SERIAL PRIMARY KEY
 );
 
 CREATE TABLE customers (
@@ -52,7 +54,7 @@ CREATE TABLE projects (
 		REFERENCES customers(id)
 );
 
-CREATE TABLE usage (
+CREATE TABLE developers_into_projects (
 	project_id INT,
 	developer_id INT,
 	FOREIGN KEY (project_id)
@@ -63,7 +65,7 @@ CREATE TABLE usage (
 
 CREATE TABLE developers_skills (
 	developer_id INT,
-	skills_id VARCHAR(10),
+	skills_id INT,
 	FOREIGN KEY (developer_id)
 		REFERENCES developers(id),
 	FOREIGN KEY (skills_id)

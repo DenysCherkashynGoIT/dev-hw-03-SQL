@@ -1,19 +1,19 @@
-INSERT INTO skills(programming_lang, grade, id) VALUES
-('JAVA', 'junior', '01_jun'),
-('JAVA', 'middle', '01_mid'),
-('JAVA', 'senior', '01_sen'),
-('C#', 'junior', '02_jun'),
-('C#', 'middle', '02_mid'),
-('C#', 'senior', '02_sen'),
-('C++', 'junior', '03_jun'),
-('C++', 'middle', '03_mid'),
-('C++', 'senior', '03_sen'),
-('JavaScript', 'junior', '04_jun'),
-('JavaScript', 'middle', '04_mid'),
-('JavaScript', 'senior', '04_sen'),
-('Pyton', 'junior', '05_jun'),
-('Pyton', 'middle', '05_mid'),
-('Pyton', 'senior', '05_sen');
+INSERT INTO skills(programming_lang, grade) VALUES
+('JAVA', 'junior'),
+('JAVA', 'middle'),
+('JAVA', 'senior'),
+('C#', 'junior'),
+('C#', 'middle'),
+('C#', 'senior'),
+('C++', 'junior'),
+('C++', 'middle'),
+('C++', 'senior'),
+('JavaScript', 'junior'),
+('JavaScript', 'middle'),
+('JavaScript', 'senior'),
+('Pyton', 'junior'),
+('Pyton', 'middle'),
+('Pyton', 'senior');
 
 INSERT INTO companies (name, website, city) VALUES
 ('Warner Brosers', 'www.warnerbros.com', 'Berbank'),
@@ -66,27 +66,27 @@ INSERT INTO projects (name, description, term, customer_id) VALUES
 ('Lord of the rings', 'Frodo in trap', '2013-03-08',3);
 
 INSERT INTO developers_skills (developer_id, skills_id) VALUES
-(1, '01_jun'), (1, '05_mid'), (1, '03_jun'),
-(2, '03_jun'),
-(3, '04_mid'), (3, '03_mid'),
-(4, '01_jun'), (4, '05_mid'), (4, '03_jun'),
-(5, '01_sen'),
-(6, '02_jun'), (6, '04_jun'), (6, '05_mid'),
-(7, '01_jun'), (7, '05_mid'), (7, '03_jun'),
-(8, '01_jun'), (8, '03_jun'), (8, '03_sen'),
-(9, '01_jun'),
-(10, '01_jun'),
-(11, '02_mid'),
-(12, '03_jun'),
-(13, '04_sen'), (13, '03_mid'),
-(14, '02_sen'),
-(15, '03_jun'),
-(16, '03_mid'), (16, '02_sen'),
-(17, '04_mid'), 
-(18, '01_jun'), (18, '02_mid'), (18, '03_jun'),
-(19, '05_jun'), (19, '04_mid');
+(1, '1'), (1, '14'), (1, '7'),
+(2, '7'),
+(3, '11'), (3, '8'),
+(4, '1'), (4, '14'), (4, '7'),
+(5, '3'),
+(6, '4'), (6, '10'), (6, '14'),
+(7, '1'), (7, '14'), (7, '7'),
+(8, '1'), (8, '7'), (8, '9'),
+(9, '1'),
+(10, '1'),
+(11, '5'),
+(12, '7'),
+(13, '12'), (13, '8'),
+(14, '6'),
+(15, '7'),
+(16, '8'), (16, '6'),
+(17, '11'), 
+(18, '1'), (18, '5'), (18, '7'),
+(19, '13'), (19, '11');
 
-INSERT INTO usage (project_id, developer_id) VALUES
+INSERT INTO developers_into_projects (project_id, developer_id) VALUES
 (1, 8), (1, 9), (1, 11), (1, 15), (1, 19),
 (2, 19), (2, 10), (2, 7), (2, 1), 
 (3, 7), (3, 5), (3, 4), (3, 6),
